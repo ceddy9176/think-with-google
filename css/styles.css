@@ -243,6 +243,23 @@ ul {
 a {
   text-decoration: none;
 }
+
+.three.wide.column {
+  margin: auto;
+  margin-top: 10vh;
+  border-radius: 0;
+}
+
+button.ui.button.blue.tools {
+    margin: 4vh 43vw;
+    width: 11vw;
+}
+
+.ui.fluid.card {
+    width: 123% !important;
+    margin-left: -2vw;
+}
+
 @media (min-width: 1180px) {
 
 }
