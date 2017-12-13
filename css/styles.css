@@ -21,7 +21,7 @@ h3 {
   font-weight: 300;
 }
 
-h3, .grid-sub-content::first-line {
+h3::first-letter {
   text-transform: capitalize;
 }
 
@@ -112,6 +112,10 @@ a {
 .grid-sub-content {
   font-size: .8em;
   color: #7d7d7d;
+}
+
+.grid-sub-content::first-letter {
+  text-transform: capitalize;
 }
 
 #ltas .span .grid-content .grid-sub-content {
