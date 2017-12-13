@@ -123,9 +123,57 @@ a.grid-image {
   height: 100%;
 }
 
-@media only screen and (max-width:1000px){
+@media only screen and (max-width: 1000px){
 
   .grid {
-      grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: .95em;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
+  .grid-item.span {
+    grid-column: 1;
+    height: 307px;
+  }
+
+  .grid-item {
+    height: auto;
+  }
+
+  .grid-item:not(.span) {
+    text-align: left;
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .grid-item:not(.span) .grid-image {
+    width: 33.3%;
+    height: 100% !important;
+    align-self: baseline;
+    display: block;
+    position: relative;
+    max-width: 130px;
+  }
+
+  .grid-content {
+    padding: 0 0 0 10px;
+    flex-basis: 60%;
+  }
+
+  #ltas .span .grid-content {
+    padding: 20px;
+  }
+
+  #ltas .span .grid-content h3 {
+    margin-bottom: 15px;
   }
 }
