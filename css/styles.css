@@ -10,6 +10,7 @@ body {
 h2 {
   font-size: 2em;
   margin-bottom: 45px;
+  position: relative;
 }
 
 h3 {
@@ -55,7 +56,11 @@ a {
   text-align: center;
 }
 
-#ltas .item .grid-content {
+.grid-item.span {
+  grid-column: span 2;
+}
+
+#ltas .span .grid-content {
   position: absolute;
   top: 0;
   height: 100%;
@@ -64,16 +69,17 @@ a {
   flex-direction: column;
   justify-content: flex-end;
   color: white;
+  padding-right: 160px;
   z-index: 1;
 }
 
-#ltas .item .item-content h3 {
+#ltas .span .grid-content h3 {
   color: white;
   margin-bottom: 60px;
 }
 
-#ltas .item:after {
-  content: " ";
+#ltas .span:after {
+  content: "";
   position: absolute;
   top: 0;
   width: 100%;
@@ -84,4 +90,34 @@ a {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.grid .grid-item:not(.span) a.grid-image {
+  height: 47%;
+}
+
+.grid-content h3 {
+  margin-bottom: 10px;
+}
+
+.grid-sub-content {
+  font-size: .8em;
+  color: #7d7d7d;
+}
+
+#ltas .span .grid-content .grid-sub-content {
+  color: white;
+}
+
+h3 img {
+  width: 20px;
+  margin-left: 15px;
+}
+
+.grid-item a {
+  width: 100%;
+}
+
+a.grid-image {
+  height: 100%;
 }
